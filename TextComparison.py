@@ -1,9 +1,3 @@
-#
-# Final Project
-#
-# Partner email: ryadav14@bu.edu
-#
-
 import math
 
 def clean_text(txt):
@@ -95,7 +89,7 @@ class TextModel:
         """ Analyzes the string txt and adds its pieces
         to all of the dictionaries in this text model.
         """
-        
+    
         sentence_list = sentence_len_helper(s)
         for sentence in sentence_list: 
             words = sentence.split()
@@ -104,13 +98,11 @@ class TextModel:
             else: 
                 self.sentence_lengths[len(words)]= 1
                 
-        
         for punc in """,?"'!;:""":
             num_punc = s.count(punc)
             if num_punc != 0:
                 self.num_punc[punc] = num_punc
          
-        
         word_list = clean_text(s) 
     
         for w in word_list:
